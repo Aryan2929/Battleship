@@ -1,19 +1,8 @@
 /// <summary>
-/// ''' Tile knows its location on the grid, if it is a ship and if it has been 
-/// ''' shot before
-/// ''' </summary>
+/// Tile knows its location on the grid, if it is a ship and if it has been 
+/// shot before
+/// </summary>
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualBasic;
 
 public class Tile
 {
@@ -23,13 +12,13 @@ public class Tile
     private bool _Shot = false;    // the tile has been shot at
                                    /// <summary>
 
-/// ''' Has the tile been shot?
+/// Has the tile been shot?
 
-/// ''' </summary>
+/// </summary>
 
-/// ''' <value>indicate if the tile has been shot</value>
+/// <value>indicate if the tile has been shot</value>
 
-/// ''' <returns>true if the tile was shot</returns>
+/// <returns>true if the tile was shot</returns>
     public bool Shot
     {
         get
@@ -44,13 +33,13 @@ public class Tile
     }
     /// <summary>
 
-/// ''' The row of the tile in the grid
+/// The row of the tile in the grid
 
-/// ''' </summary>
+/// </summary>
 
-/// ''' <value>the row index of the tile in the grid</value>
+/// <value>the row index of the tile in the grid</value>
 
-/// ''' <returns>the row index of the tile</returns>
+/// <returns>the row index of the tile</returns>
     public int Row
     {
         get
@@ -60,13 +49,13 @@ public class Tile
     }
     /// <summary>
 
-/// ''' The column of the tile in the grid
+/// The column of the tile in the grid
 
-/// ''' </summary>
+/// </summary>
 
-/// ''' <value>the column of the tile in the grid</value>
+/// <value>the column of the tile in the grid</value>
 
-/// ''' <returns>the column of the tile in the grid</returns>
+/// <returns>the column of the tile in the grid</returns>
     public int Column
     {
         get
@@ -76,9 +65,9 @@ public class Tile
     }
     /// <summary>
 
-/// ''' Ship allows for a tile to check if there is ship and add a ship to a tile
+/// Ship allows for a tile to check if there is ship and add a ship to a tile
 
-/// ''' </summary>
+/// </summary>
     public Ship Ship
     {
         get
@@ -100,15 +89,15 @@ public class Tile
     }
     /// <summary>
 
-/// ''' The tile constructor will know where it is on the grid, and is its a ship
+/// The tile constructor will know where it is on the grid, and is its a ship
 
-/// ''' </summary>
+/// </summary>
 
-/// ''' <param name="row">the row on the grid</param>
+/// <param name="row">the row on the grid</param>
 
-/// ''' <param name="col">the col on the grid</param>
+/// <param name="col">the col on the grid</param>
 
-/// ''' <param name="ship">what ship it is</param>
+/// <param name="ship">what ship it is</param>
     public Tile(int row, int col, Ship ship)
     {
         _RowValue = row;
@@ -117,18 +106,18 @@ public class Tile
     }
     /// <summary>
 
-/// ''' Clearship will remove the ship from the tile
+/// Clearship will remove the ship from the tile
 
-/// ''' </summary>
+/// </summary>
     public void ClearShip()
     {
         _Ship = null;
     }
     /// <summary>
 
-/// ''' View is able to tell the grid what the tile is
+/// View is able to tell the grid what the tile is
 
-/// ''' </summary>
+/// </summary>
     public TileView View
     {
         get
@@ -154,11 +143,11 @@ public class Tile
     }
     /// <summary>
 
-/// ''' Shoot allows a tile to be shot at, and if the tile has been hit before
+/// Shoot allows a tile to be shot at, and if the tile has been hit before
 
-/// ''' it will give an error
+/// it will give an error
 
-/// ''' </summary>
+/// </summary>
     internal void Shoot()
     {
         if ((false == Shot))

@@ -228,7 +228,7 @@ public class MenuController {
     private static void PerformMainMenuAction(int button) {
         switch (button) {
             case MAIN_MENU_PLAY_BUTTON:
-                StartGame();
+                StartGame();//founded error or bug ---------------------------------------------
                 break;
             case MAIN_MENU_SETUP_BUTTON:
                 AddNewState(GameState.AlteringSettings);

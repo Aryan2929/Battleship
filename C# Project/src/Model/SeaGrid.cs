@@ -15,7 +15,7 @@ public class SeaGrid : ISeaGrid
     private const int _WIDTH = 10;
     private const int _HEIGHT = 10;
 
-    private Tile[,] _GameTiles = new Tile[_WIDTH - 1, _HEIGHT - 1];
+    private Tile[,] _GameTiles = new Tile[_WIDTH, _HEIGHT];
     private Dictionary<ShipName, Ship> _Ships;
     private int _ShipsKilled = 0;
 
@@ -80,9 +80,9 @@ public class SeaGrid : ISeaGrid
 
     public SeaGrid(Dictionary<ShipName, Ship> ships)
     {
-        for (int i=0; i<Width-1; i++)
+        for (int i=0; i<=Width-1; i++)
         {
-            for (int j=0; j<Height-1; j++)
+            for (int j=0; j<=Height-1; j++)
             {
                 _GameTiles[i, j] = new Tile(i, j, null);
             }
@@ -100,7 +100,7 @@ public class SeaGrid : ISeaGrid
     public void MoveShip(int row, int col, ShipName ship, Direction direction)
     {
         Ship newShip = _Ships[ship];
-        newShip.Remove();
+        //newShip.Remove();
         AddShip(row, col, direction, newShip);
     }
 
@@ -157,7 +157,10 @@ public class SeaGrid : ISeaGrid
         }
         finally
         {
-            Changed(this, EventArgs.Empty);
+            if (Changed != null)
+            {
+                Changed(this, EventArgs.Empty);
+            }
         }
 
     }
@@ -201,7 +204,10 @@ public class SeaGrid : ISeaGrid
         }
         finally
         {
-            Changed(this, EventArgs.Empty);
+            if (Changed != null)
+            {
+                Changed(this, EventArgs.Empty);
+            }
         }
 
     }

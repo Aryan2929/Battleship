@@ -244,12 +244,12 @@ public class Player : IEnumerable<Ship>
                 else
                     heading = Direction.LeftRight;
 
-                // try to place ship, if position unplaceable, generate new coordinates
-                try
-                {
+               // try to place ship, if position unplaceable, generate new coordinates
+               try
+               {
                     PlayerGrid.MoveShip(x, y, shipToPlace, heading);
                     placementSuccessful = true;
-                }
+               }
                 catch
                 {
                     placementSuccessful = false;

@@ -18,7 +18,6 @@ using static EndingGameController;
 public static class GameController
 {
     private static BattleShipsGame _theGame;
-    private static Player _human;
     private static AIPlayer _ai;
     private static Stack<GameState> _state = new Stack<GameState>(new[] { GameState.Quitting, GameState.ViewingMainMenu });
     private static AIOption _aiSetting;
@@ -33,12 +32,9 @@ public static class GameController
 	{
         get => _state.Peek();
     }
-    
-    public static Player HumanPlayer
-	{
-        get => _human;
-    }
-    
+
+    public static Player HumanPlayer { get; private set; }
+
     public static Player ComputerPlayer
 	{
         get => _ai;
@@ -52,26 +48,30 @@ public static class GameController
     // Creates an AI player based upon the _aiSetting.
     // </remarks>
     public static void StartGame() {
-        if (_theGame != null) GameController.EndGame();
+        if (_theGame != null) EndGame();
         // Create the game
         _theGame = new BattleShipsGame();
         // create the players
-        switch (_aiSetting) {
+        switch (_aiSetting)
+        {
             case AIOption.Medium:
-                _ai = new AIMediumPlayer(_theGame);
+               _ai = new AIMediumPlayer(_theGame);
                 break;
             case AIOption.Hard:
                 _ai = new AIHardPlayer(_theGame);
                 break;
+            
             default:
                 _ai = new AIHardPlayer(_theGame);
                 break;
         }
-        _human = new Player(_theGame);
+        _ai = new AIHardPlayer(_theGame);
+        HumanPlayer = new Player(_theGame);
+        
         // AddHandler _human.PlayerGrid.Changed, AddressOf GridChanged
         _ai.PlayerGrid.Changed += GridChanged;
         _theGame.AttackCompleted +=  AttackCompleted;
-        GameController.AddNewState(GameState.Deploying);
+        AddNewState(GameState.Deploying);
         
         // <summary>
         // Stops listening to the old game once a new game is started
@@ -88,10 +88,10 @@ public static class GameController
     // Listens to the game grids for any changes and redraws the screen
     // when the grids change
     // </summary>
-    // <param name="sender">the grid that changed</param>
+    //<param name="sender">the grid that changed</param>
     // <param name="args">not used</param>
     private static void GridChanged(object sender, EventArgs args) {
-        GameController.DrawScreen();
+        DrawScreen();
         SwinGame.RefreshScreen();
     }
     
@@ -174,7 +174,7 @@ public static class GameController
     // </remarks>
     public static void EndDeployment() {
         // deploy the players
-        _theGame.AddDeployedPlayer(_human);
+        _theGame.AddDeployedPlayer(HumanPlayer);
         _theGame.AddDeployedPlayer(_ai);
         GameController.SwitchState(GameState.Discovering);
     }

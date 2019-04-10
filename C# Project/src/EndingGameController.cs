@@ -34,7 +34,7 @@ class EndingGameController {
     
     // <summary>
     // Handle the input during the end of the game. Any interaction
-    // will result in it reading in the highsSwinGame.
+    // will result in it reading in the highscoreSwinGame.
     // </summary>
     public static void HandleEndOfGameInput() {
         if ((SwinGame.MouseClicked(MouseButton.LeftButton) ||

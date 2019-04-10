@@ -3,6 +3,7 @@ using SwinGameSDK;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 
+//Loads all the resources for the game
 public class GameResources {
     
     private static void LoadFonts() {

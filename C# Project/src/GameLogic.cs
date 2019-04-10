@@ -2,6 +2,7 @@ using SwinGameSDK;
 using static GameResources;
 using static GameController;
 
+//Loads the game
 static class GameLogic {
     public static void Main() {
         // Opens a new Graphics Window

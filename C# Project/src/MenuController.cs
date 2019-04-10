@@ -11,7 +11,7 @@ using static UtilityFunctions;
 // menu and the settings m,enu.
 // </summary>
 public class MenuController {
-
+	//The menu structure for the game
     private static List<List<string>> _menuStructure = new List<List<string>> {
         new List<string> {"PLAY", "SETUP", "SCORES", "QUIT"},
         new List<string> {"RETURN", "SURRENDER", "QUIT"}, 

@@ -174,7 +174,6 @@ static class UtilityFunctions {
         // Draw the ships
         foreach (Ship s in thePlayer) {
             if (((s == null) || !s.IsDeployed)) {
-                // TODO: Continue For... Warning!!! not translated
             }
             
             rowTop = (top 
@@ -232,7 +231,7 @@ static class UtilityFunctions {
             _message = value;
         }
     }
-    
+    //Draws image on screen
     public static void DrawMessage() {
         SwinGame.DrawText(Message, MESSAGE_COLOR, GameFont("Courier"), FIELD_LEFT, MESSAGE_TOP);
     }

@@ -21,7 +21,7 @@ public enum ResultOfAttack
     ShotAlready,
 
     /// <summary>
-    /// The player killed all of the opponents ships
+    /// The player destroyed all of the opponents ships
     /// </summary>
     GameOver
 }

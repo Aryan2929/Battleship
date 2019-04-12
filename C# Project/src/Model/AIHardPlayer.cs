@@ -1,9 +1,9 @@
 /// <summary>
 /// AIHardPlayer is a type of player. This AI will know directions of ships
-/// when it has found 2 ship tiles and will try to destroy that ship. If that ship
+/// when it has found 2 ships tiles and it will try to destroy that ship. If that ship
 /// is not destroyed it will shoot the other way. Ship still not destroyed, then
-/// the AI knows it has hit multiple ships. Then will try to destoy all around tiles
-/// that have been hit.
+/// the AI knows it has hit multiple ships. Then it will try to destoy all around tiles
+/// that have not been hit.
 /// </summary>
 using System;
 using System.Collections.Generic;
@@ -53,7 +53,7 @@ public class AIHardPlayer : AIPlayer
         }
 
         /// <summary>
-        /// If source shot and shootat shot are on the same row then 
+        /// If source shot and shoot at location shot is on the same row then 
         /// give a boolean true
         /// </summary>
         public bool SameRow
@@ -65,7 +65,7 @@ public class AIHardPlayer : AIPlayer
         }
 
         /// <summary>
-        /// If source shot and shootat shot are on the same column then 
+        /// If source shot and shoot at location shot is on the same column then 
         /// give a boolean true 
         /// </summary>
         public bool SameColumn
@@ -121,7 +121,7 @@ public class AIHardPlayer : AIPlayer
         {
             _CurrentTarget = null;
 
-            // check which state the AI is in and uppon that choose which coordinate generation
+            // check which state the AI is in and uppon that choice which coordinate generation
             // method will be used.
             switch (_CurrentState)
             {

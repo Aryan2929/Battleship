@@ -46,7 +46,7 @@ public class Player : IEnumerable<Ship>
         _playerGrid = new SeaGrid(_Ships);
         _game = controller;
 
-        // for each ship add the ships name so the seagrid knows about them
+        // for each ship add the ships name so the SeaGrid knows about them
         foreach (ShipName name in Enum.GetValues(typeof(ShipName)))
         {
             if (name != ShipName.None)
@@ -118,7 +118,7 @@ public class Player : IEnumerable<Ship>
     /// The number of shots the player has made
     /// </summary>
     /// <value>shots taken</value>
-    /// <returns>teh number of shots taken</returns>
+    /// <returns>the number of shots taken</returns>
     public int Shots
     {
         get
@@ -224,7 +224,7 @@ public class Player : IEnumerable<Ship>
         bool placementSuccessful;
         Direction heading;
 
-        // for each ship to deploy in shipist
+        // for each ship to deploy in the ship list
         foreach (ShipName shipToPlace in Enum.GetValues(typeof(ShipName)))
         {
             Console.WriteLine("{0}", shipToPlace);

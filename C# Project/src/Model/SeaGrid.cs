@@ -5,7 +5,7 @@ using System.Collections.Generic;
 // The SeaGrid is the grid upon which the ships are deployed.
 // </summary>
 // <remarks>
-// The grid is viewable via the ISeaGrid interface as a read only
+// The grid is visibal via the ISeaGrid interface as a read only
 // grid. This can be used in conjuncture with the SeaGridAdapter to 
 // mask the position of the ships.
 // </remarks>
@@ -131,7 +131,7 @@ public class SeaGrid : ISeaGrid
                 dCol = 0;
             }
 
-            // place ship's tiles in array and into ship object
+            // place ship's tiles on array and into ship object
             for (int i=0; i<=size-1; i++)
             {
                 if (currentRow < 0 ||

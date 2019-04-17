@@ -9,7 +9,7 @@ using static UtilityFunctions;
 // The DeploymentController controls the players actions
 // during the deployment phase.
 // </summary>
-static class DeploymentController {
+public static class DeploymentController {
     
     private const int SHIPS_TOP = 98;
     private const int SHIPS_LEFT = 20;

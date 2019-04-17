@@ -8,7 +8,7 @@ using static GameResources;
 // This includes a number of utility methods for
 // drawing and interacting with the Mouse.
 // </summary>
-static class UtilityFunctions {
+public static class UtilityFunctions {
     
     public const int FIELD_TOP = 122;
     public const int FIELD_LEFT = 349;

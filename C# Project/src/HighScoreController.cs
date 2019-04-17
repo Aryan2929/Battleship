@@ -13,7 +13,7 @@ using static GameResources;
 // <remarks>
 // Data is saved to a file.
 // </remarks>
-static class HighScoreController
+public static class HighScoreController
 {
 
     private const int NAME_WIDTH = 3;

@@ -8,7 +8,7 @@ using static UtilityFunctions;
 // The EndingGameController is responsible for managing the interactions at the end
 // of a game.
 // </summary>
-class EndingGameController {
+public static class EndingGameController {
     
     // <summary>
     // Draw the end of the game screen, shows the win/lose state

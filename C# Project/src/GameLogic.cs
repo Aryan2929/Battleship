@@ -2,7 +2,7 @@ using SwinGameSDK;
 using static GameResources;
 using static GameController;
 
-static class GameLogic {
+public static class GameLogic {
     public static void Main() {
         // Opens a new Graphics Window
         SwinGame.OpenGraphicsWindow("Battle Ships", 800, 600);

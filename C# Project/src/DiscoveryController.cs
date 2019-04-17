@@ -8,7 +8,7 @@ using static GameResources;
 // <summary>
 // The battle phase is handled by the DiscoveryController.
 // </summary>
-class DiscoveryController {
+public static class DiscoveryController {
     
     // <summary>
     // Handles input during the discovery phase of the game.

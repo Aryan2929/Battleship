@@ -65,7 +65,6 @@ public static class GameController
                 _ai = new AIHardPlayer(_theGame);
                 break;
         }
-        _ai = new AIHardPlayer(_theGame);
         HumanPlayer = new Player(_theGame);
         
         // AddHandler _human.PlayerGrid.Changed, AddressOf GridChanged

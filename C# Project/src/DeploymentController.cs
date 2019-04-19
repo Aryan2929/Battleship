@@ -95,10 +95,8 @@ public static class DeploymentController {
         // Calculate the row/col clicked
         int row;
         int col;
-        row = Convert.ToInt32(Math.Floor((mouse.Y 
-                            / (CELL_HEIGHT + CELL_GAP))));
-        col = Convert.ToInt32(Math.Floor(((mouse.X - FIELD_LEFT) 
-                            / (CELL_WIDTH + CELL_GAP))));
+        row = Convert.ToInt32(Math.Floor(((mouse.Y - FIELD_TOP) / (CELL_HEIGHT + CELL_GAP))));
+        col = Convert.ToInt32(Math.Floor(((mouse.X - FIELD_LEFT) / (CELL_WIDTH + CELL_GAP))));
         if (((row >= 0) 
                     && (row < HumanPlayer.PlayerGrid.Height))) {
             if (((col >= 0) 

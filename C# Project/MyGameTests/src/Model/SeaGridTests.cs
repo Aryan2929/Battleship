@@ -35,5 +35,27 @@ namespace BattleShipTests
                 }
             }
         }
+
+        [Test]
+        public void TestSeaGridSize()
+        {
+            Assert.AreEqual(10, _seaGrid.Width);
+            Assert.AreEqual(10, _seaGrid.Height);
+        }
+
+        [Test]
+        public void TestSeaGridMoveShip()
+        {
+            Ship destroyer = _ships[ShipName.Destroyer];
+            _seaGrid.MoveShip(5, 5, ShipName.Destroyer, Direction.LeftRight);
+            Assert.IsTrue(destroyer.IsDeployed);
+        }
+
+        [Test]
+        public void TestSeaGridHitTile()
+        {
+            _seaGrid.MoveShip(0, 0, ShipName.Destroyer, Direction.LeftRight);
+            Assert.AreEqual(ResultOfAttack.Hit, _seaGrid.HitTile(0, 0).Value);
+        }
     }
 }

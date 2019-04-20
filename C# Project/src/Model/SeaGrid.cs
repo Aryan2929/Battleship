@@ -100,7 +100,7 @@ public class SeaGrid : ISeaGrid
     public void MoveShip(int row, int col, ShipName ship, Direction direction)
     {
         Ship newShip = _Ships[ship];
-        //newShip.Remove();
+        newShip.Remove();
         AddShip(row, col, direction, newShip);
     }
 

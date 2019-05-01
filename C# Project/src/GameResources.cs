@@ -110,19 +110,19 @@ public class GameResources {
         GameResources.ShowLoadingScreen();
         GameResources.ShowMessage("Loading fonts...", 0);
         GameResources.LoadFonts();
-        SwinGame.Delay(100);
+        SwinGame.Delay(25);
         GameResources.ShowMessage("Loading images...", 1);
         GameResources.LoadImages();
-        SwinGame.Delay(100);
+        SwinGame.Delay(25);
         GameResources.ShowMessage("Loading sounds...", 2);
         GameResources.LoadSounds();
-        SwinGame.Delay(100);
+        SwinGame.Delay(25);
         GameResources.ShowMessage("Loading music...", 3);
         GameResources.LoadMusic();
-        SwinGame.Delay(100);
-        SwinGame.Delay(100);
+        SwinGame.Delay(25);
+        SwinGame.Delay(25);
         GameResources.ShowMessage("Game loaded...", 5);
-        SwinGame.Delay(100);
+        SwinGame.Delay(25);
         GameResources.EndLoadingScreen(width, height);
     }
     

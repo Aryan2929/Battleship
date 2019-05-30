@@ -52,7 +52,7 @@ public class Ship
     /// </summary>
     /// <value>The number of hits the ship has taken.</value>
     /// <returns>The number of hits the ship has taken</returns>
-    /// <remarks>When this equals Size the ship is sunk</remarks>
+    /// <remarks>When this equals the Size of the ship is sunk</remarks>
     public int Hits
     {
         get
@@ -95,7 +95,7 @@ public class Ship
         _shipName = ship;
         _tiles = new List<Tile>();
 
-        // gets the ship size from the enumarator
+        // gets size of the ship from the enumarator
         _sizeOfShip = (int)_shipName;
     }
 
@@ -109,7 +109,7 @@ public class Ship
     }
 
     /// <summary>
-    /// Remove clears the tile back to a sea tile
+    /// Remove the ship and clears the tile back to a sea tile
     /// </summary>
     public void Remove()
     {

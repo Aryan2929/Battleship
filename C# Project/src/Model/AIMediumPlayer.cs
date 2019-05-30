@@ -62,7 +62,7 @@ public class AIMediumPlayer : AIPlayer
     }
 
     /// <summary>
-    /// TargetCoords is used when a ship has been hit and it will try and destroy
+    /// TargetCoords is used when a ship has been hit and it will try to destroy
     /// this ship
     /// </summary>
     /// <param name="row">row generated around the hit tile</param>
@@ -95,7 +95,7 @@ public class AIMediumPlayer : AIPlayer
     /// </summary>
     /// <param name="row">the row it needs to process</param>
     /// <param name="col">the column it needs to process</param>
-    /// <param name="result">the result og the last shot (should be hit)</param>
+    /// <param name="result">the result of the last shot (should be hit)</param>
     protected override void ProcessShot(int row, int col, AttackResult result)
     {
         if (result.Value == ResultOfAttack.Hit)

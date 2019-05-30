@@ -1,7 +1,7 @@
 public enum TileView
 {
     /// <summary>
-    /// The viewer can see sea
+    /// The viewer can see the sea
     /// </summary>
     /// <remarks>
     /// May be masking a ship if viewed via a sea adapter

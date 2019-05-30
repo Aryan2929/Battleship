@@ -1,5 +1,5 @@
 /// <summary>
-/// The ISeaGrid defines the read only interface of a Grid. This
+/// The ISeaGrid defines the read only interface of the Grid. This
 /// allows each player to see and attack their opponents grid.
 /// </summary>
 using System;

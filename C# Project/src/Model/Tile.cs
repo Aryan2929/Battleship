@@ -8,7 +8,7 @@ public class Tile
 {
     private readonly int _RowValue;        // the row value of the tile
     private readonly int _ColumnValue;     // the column value of the tile
-    private Ship _Ship = null/* TODO Change to default(_) if this is not a reference type */;     // the ship the tile belongs to
+    private Ship _Ship = null/* TODO Change to default(_) if this is not a reference type */;     // the ship the tile belongs to ship
     private bool _Shot = false;    // the tile has been shot at
                                    /// <summary>
 
@@ -18,7 +18,7 @@ public class Tile
 
 /// <value>indicate if the tile has been shot</value>
 
-/// <returns>true if the tile was shot</returns>
+/// <returns>true if the tile was shot at</returns>
     public bool Shot
     {
         get
@@ -115,7 +115,7 @@ public class Tile
     }
     /// <summary>
 
-/// View is able to tell the grid what the tile is
+/// View is able to tell the grid what the tile looks alike empty space, been hit or hasn't been hit
 
 /// </summary>
     public TileView View
@@ -143,7 +143,7 @@ public class Tile
     }
     /// <summary>
 
-/// Shoot allows a tile to be shot at, and if the tile has been hit before
+/// Shoot allows a tile to be shot at, and only if the tile has not been hit before
 
 /// it will give an error
 
